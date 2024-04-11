@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="teoriaMusical.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega el enlace a Font Awesome -->
+        <title></title>
+        <style>
+            .container {
+                display: grid;
+                grid-template-rows: auto 1fr auto; /* Define tres filas, la primera para el header, la segunda para el contenido y la tercera para el footer */
+                gap: 20px; /* Espacio entre las filas y columnas */
+                height: 100vh; /* Altura total de la ventana */
+            }
+    
+            .header, .footer {
+                grid-row: 1 / 2; /* Se extienden desde la primera fila hasta la segunda */
+            }
+    
+            .content {
+                grid-row: 2 / 3; /* Se ubica en la segunda fila */
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas igualmente espaciadas */
+                gap: 20px; /* Espacio entre los cuadros */
+                padding: 20px; /* Espacio alrededor del contenido */
+            }
+    
+            .box {
+                background-color: #c16ff0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                height: 100px; /* Altura del cuadro */
+                font-size: 20px; /* Tamaño de la fuente */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1 data-text="Principal"><a href="index.html"><i class="fas fa-home"></i></a></h1>
+            <h1 data-text="Teoría"><a href="teoria.html"><i class="fas fa-book-open"></i></a></h1>
+            <h1 data-text="Solfeo"><a href="solfeo.html"><i class="fas fa-music"></i></a></h1>
+            <h1 data-text="Audición"><a href="audicion.html"><i class="fas fa-volume-up"></i></a></h1>
+        </div>
+        <div class="content" >
+            <div class="box"><a href="aud1.html" id="c1" >Escalas</a></div>
+            <div class="box"><a href="aud2.html" id="c1" >Intervalos</a></div>
+        </div>
+        <div class="footer"></div>
+    </body>
+</html>
